@@ -1,0 +1,53 @@
+package opeartions;
+
+public class P1 {
+public void add(int x,int y)
+{
+System.out.println(x+"+"+y+"="+(x+y));
+}
+public void subtract(int x,int y)
+{
+System.out.println(x+"-"+y+"="+(x-y));
+}
+public void multiply(int x,int y)
+{
+System.out.println(x+"*"+y+"="+(x*y));
+}
+public void divide(int x,int y)
+{
+System.out.println(x+"/"+y+"="+(x/y));
+}
+}
+package input;
+import java.util.Scanner;
+
+import opeartions.*;
+public class P2 {
+
+public static void main(String[] args) {
+// TODO Auto-generated method stub
+P1 o=new P1();
+Scanner s=new Scanner(System.in);
+System.out.println("enter numbers");
+int x=s.nextInt();
+int y=s.nextInt();
+System.out.println("Calculator:\n1:add\n2:sub\n3:mul\n4:div\n");
+
+int opt=s.nextInt();
+
+switch(opt)
+{
+case 1:o.add(x, y);
+      break;
+case 2:o.subtract(x, y);
+        break;
+case 3:o.multiply(x, y);
+       break;
+case 4:o.divide(x,y);
+      break;
+default:
+System.out.println("invalid option");
+}
+s.close();
+}
+}
